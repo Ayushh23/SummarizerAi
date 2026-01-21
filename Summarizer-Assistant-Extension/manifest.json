@@ -1,0 +1,31 @@
+{
+    
+    "name":"Summarizer AI assistant",
+    "version":"1.0",
+    "manifest_version":3,
+    "description":"AI powered summarizer assistant that will summarize your long contents in short and understandable",
+    "permissions":[
+        "activeTab",
+        "storage",
+        "sidePanel",
+        "scripting"
+    ],
+    "action": {
+        "default_title":"Summarizer Assistant"
+
+    },
+    "side_panel":{
+        "default_path":"sidepanel.html"
+    },
+
+    "background":{
+        "service_worker": "background.js"
+    },
+    "host_permissions":[
+        "http://localhost:8080/*",
+        "<all_urls>"
+    ],
+    "content_security_policy":{
+        "extension_pages":"script-src 'self'; object-src 'self'"
+    }
+}
